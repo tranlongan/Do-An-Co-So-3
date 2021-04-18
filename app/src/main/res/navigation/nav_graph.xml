@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/item_activity_overall_heath">
+
+    <fragment
+        android:id="@+id/item_activity_overall_heath"
+        android:name="com.example.healthapp.fragment.OverallHealthFragment"
+        android:label="OverallHealthFragment" >
+        <action
+            android:id="@+id/action_item_activity_overall_heath_to_profileDialogFragment"
+            app:destination="@id/profileDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/item_activity_browser"
+        android:name="com.example.healthapp.fragment.BrowserFragment"
+        android:label="fragment_browser"
+        tools:layout="@layout/fragment_browser" >
+        <action
+            android:id="@+id/action_item_activity_browser_to_profileDialogFragment"
+            app:destination="@id/profileDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/profileDialogFragment"
+        android:name="com.example.healthapp.dialog.ProfileDialogFragment"
+        android:label="ProfileDialogFragment" />
+</navigation>
